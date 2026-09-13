@@ -4,7 +4,7 @@ const context = canvas.getContext("2d");
 
 const frameCount = 300;
 const currentFrame = index => (
-  `./frames/frame_${index.toString().padStart(6, '0')}.jpg`
+  `./frames/frame_${index.toString().padStart(4, '0')}.jpg`
 )
 
 const images = [];
