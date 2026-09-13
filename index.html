@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - KUNAL SHOKEEN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas -->
+    <div id="canvas-container">
+        <canvas id="scroll-canvas"></canvas>
+        <div class="canvas-overlay"></div>
+    </div>
+
+    <!-- UI Overlay container -->
+    <main class="content-overlay">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">KUNALSWEB</div>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#metrics">Metrics</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+            </ul>
+            <a href="resume.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">Download Resume <span class="arrow">↓</span></a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-text">
+                <p class="greeting">Hi, I am</p>
+                <div class="split-title">
+                    <span class="left-word">KUNAL</span>
+                    <span class="right-word">SHOKEEN</span>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-left">
+                    <p class="trusted"><span class="dot">•</span> Quality Governance • Customer Experience • Sales & Service Quality</p>
+                    <h2>Assistant Manager – Quality<br>& Customer Experience</h2>
+                    <div class="hero-buttons">
+                        <a href="#experience" class="btn-primary">View Experience <span class="arrow">↓</span></a>
+                        <a href="#projects" class="btn-text">View Projects <span class="arrow-small">↘</span></a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="glass-card">
+                        <div class="avatars-container">
+                            <div class="avatars">
+                                <div class="avatar" style="background: #e85d04;"></div>
+                                <div class="avatar" style="background: #ff8c42;"></div>
+                            </div>
+                            <div class="avatar-count">✦</div>
+                        </div>
+                        <p class="satisfaction-text">Consistent Process Compliance<br><span class="muted">— & Operational Excellence.</span></p>
+                        <div class="tags">
+                            <span class="tag">Process Excellence</span>
+                            <span class="tag">Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee Section -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>QUALITY ASSURANCE ✦ CUSTOMER EXPERIENCE ✦ SALES & SERVICE QUALITY ✦ PROCESS EXCELLENCE ✦ </span>
+                <span>QUALITY ASSURANCE ✦ CUSTOMER EXPERIENCE ✦ SALES & SERVICE QUALITY ✦ PROCESS EXCELLENCE ✦ </span>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-left">
+                <p class="section-label"><span class="dot-orange"></span> Professional Summary</p>
+                <div class="line"></div>
+            </div>
+            <div class="about-right">
+                <p class="about-text">
+                    Quality Assurance and Customer Experience professional with 7+ years of experience across Quality, Operations and Customer Service in fast-paced BPO and retail environments. Experienced in leading quality teams, driving audits and calibrations, identifying process gaps, coaching bottom performers, analysing customer experience trends and partnering with Operations and Training teams to improve business outcomes.
+                </p>
+                <div class="about-buttons">
+                    <a href="resume.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">Download Resume <span class="arrow">↓</span></a>
+                    <a href="#contact" class="btn-text">Contact Me <span class="arrow-small">↘</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Bring Section -->
+        <section class="what-i-bring-section" id="whatibring">
+            <div class="section-header">
+                <p class="section-label"><span class="dot-orange"></span> What I Bring</p>
+                <div class="line"></div>
+            </div>
+            <div class="bring-grid">
+                <div class="bring-card glass-card">
+                    <h4>Quality Governance</h4>
+                    <p class="muted mt-2">Build and maintain structured quality governance across Customer Service and Sales operations.</p>
+                </div>
+                <div class="bring-card glass-card">
+                    <h4>Customer Experience</h4>
+                    <p class="muted mt-2">Translate customer feedback, CSAT, NPS, complaints and interaction insights into improvement opportunities.</p>
+                </div>
+                <div class="bring-card glass-card">
+                    <h4>Performance Improvement</h4>
+                    <p class="muted mt-2">Use coaching, RCA, feedback and action plans to improve bottom-quartile performance.</p>
+                </div>
+                <div class="bring-card glass-card">
+                    <h4>Process Excellence</h4>
+                    <p class="muted mt-2">Identify recurring defects, process gaps and customer-impacting issues and drive corrective actions.</p>
+                </div>
+                <div class="bring-card glass-card">
+                    <h4>Stakeholder Management</h4>
+                    <p class="muted mt-2">Partner with Operations, Sales, Training and other stakeholders to align quality and business expectations.</p>
+                </div>
+                <div class="bring-card glass-card">
+                    <h4>Risk & Pattern Analysis</h4>
+                    <p class="muted mt-2">Analyse behaviour, suspicious patterns and recurring anomalies to implement robust preventive controls.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CX Metrics Section -->
+        <section class="cx-metrics-section" id="metrics">
+            <div class="section-header">
+                <p class="section-label"><span class="dot-orange"></span> CX Metrics & Governance</p>
+                <div class="line"></div>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-item glass-card">
+                    <h3>CSAT</h3>
+                    <p class="muted mt-2">Customer Satisfaction</p>
+                </div>
+                <div class="metric-item glass-card">
+                    <h3>NPS</h3>
+                    <p class="muted mt-2">Net Promoter Score</p>
+                </div>
+                <div class="metric-item glass-card">
+                    <h3>CES</h3>
+                    <p class="muted mt-2">Customer Effort Score</p>
+                </div>
+                <div class="metric-item glass-card">
+                    <h3>Customer Complaints</h3>
+                    <p class="muted mt-2">Recurring dissatisfaction and complaint trends</p>
+                </div>
+                <div class="metric-item glass-card">
+                    <h3>Quality Score</h3>
+                    <p class="muted mt-2">Interaction and process quality</p>
+                </div>
+                <div class="metric-item glass-card">
+                    <h3>Customer Comebacks</h3>
+                    <p class="muted mt-2">Repeat customer/contact patterns</p>
+                </div>
+                <div class="metric-item glass-card">
+                    <h3>Sales Quality</h3>
+                    <p class="muted mt-2">Quality and compliance of Sales interactions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience">
+            <div class="section-header">
+                <p class="section-label"><span class="dot-orange"></span> Professional Experience</p>
+                <div class="line"></div>
+            </div>
+            
+            <div class="career-progression glass-card mb-4">
+                <p class="progression-title">Career Progression</p>
+                <div class="progression-steps">
+                    <span>Customer Service</span>
+                    <span class="arr">→</span>
+                    <span>Quality Analyst</span>
+                    <span class="arr">→</span>
+                    <span>QTL</span>
+                    <span class="arr">→</span>
+                    <span class="highlight">Assistant Manager</span>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <!-- Lenskart AM -->
+                <div class="timeline-item highlight-item">
+                    <div class="timeline-dot highlight-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Assistant Manager – Quality</h3>
+                                <h4>Lenskart</h4>
+                            </div>
+                            <span class="date tag highlight-tag">December 2024 – Present</span>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Lead Quality Assurance and Customer Experience governance across Customer Service and Sales operations, ensuring adherence to defined quality, process and customer experience standards.</li>
+                            <li>Drive audit strategy, sampling, calibration and feedback mechanisms across both Customer Service and Sales processes to improve evaluation consistency and quality outcomes.</li>
+                            <li>Monitor and analyse CSAT, NPS, customer complaints, quality scores, sales quality, process adherence and customer-impacting defects to identify trends and improvement opportunities.</li>
+                            <li>Conduct RCA, trend analysis and customer comeback analysis to identify recurring issues and implement corrective and preventive action plans.</li>
+                            <li>Partner with Operations, Sales, Training and other cross-functional stakeholders to improve customer experience, process adherence and business performance.</li>
+                            <li>Lead bottom-quartile and performance-improvement interventions, using targeted coaching, feedback and action plans to improve individual and team performance.</li>
+                            <li>Drive calibration and quality governance forums with Operations and Training teams to ensure consistent evaluation standards and alignment with business expectations.</li>
+                            <li>Manage quality dashboards, weekly/monthly performance reviews and actionable insights, highlighting risks, trends and opportunities to senior stakeholders.</li>
+                            <li>Identify opportunities for process improvement, defect reduction and customer journey enhancement through data-driven analysis and structured problem solving.</li>
+                            <li>Support sales quality governance, ensuring customer interactions are compliant, accurate and aligned with the desired customer experience.</li>
+                            <li>Analyse customer complaints, escalations and service failures to identify root causes and recurring pain points, converting insights into process and coaching interventions.</li>
+                            <li>Collaborate with relevant stakeholders on risk, fraud and suspicious customer/order patterns, supporting identification of behavioural trends and potential process gaps.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lenskart QTL -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Quality Team Leader</h3>
+                                <h4>Lenskart</h4>
+                            </div>
+                            <span class="date tag">February 2024 – November 2024</span>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Led the Quality team to maintain audit and feedback coverage while ensuring adherence to defined quality standards.</li>
+                            <li>Conducted regular calibration sessions with Quality and Operations stakeholders to improve evaluation consistency.</li>
+                            <li>Planned and tracked quality audits, RCA, feedback and action plans; followed up on closure of identified gaps.</li>
+                            <li>Coached associates and Quality Analysts through skill-improvement sessions and targeted interventions.</li>
+                            <li>Worked closely with Operations and Training teams to address process gaps and improve customer experience outcomes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Talentedge -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Senior Quality Analyst</h3>
+                                <h4>Talentedge, Gurgaon</h4>
+                            </div>
+                            <span class="date tag">September 2022 – September 2023</span>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Worked as Senior Quality Analyst and acting QTL, effectively managing and leading a quality team of 8 people.</li>
+                            <li>Handled Sales and Post-Sales training and quality, including performance measurement and plans of action.</li>
+                            <li>Flagged real-time system issues, identified resolutions, performed ATA and addressed process gaps.</li>
+                            <li>Screened and conducted interviews for Associates and QA; created audit plans and maintained QA/Trainer rosters.</li>
+                            <li>Managed recurring reports, quality improvement plans, RCA/escalation trackers, skip-level meetings and stakeholder coordination.</li>
+                            <li>Conducted skill-improvement sessions, internal quality reviews and frequent calibration sessions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PC Financial -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Senior Quality Analyst</h3>
+                                <h4>PC Financial Pvt. Ltd., Gurgaon</h4>
+                            </div>
+                            <span class="date tag">January 2020 – September 2022</span>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Performed voice and non-voice audits and provided live feedback to improve quality results.</li>
+                            <li>Conducted calibration sessions with clients and Operations; coached NHT batches and delivered refreshers for BQ/MQ associates.</li>
+                            <li>Maintained daily, weekly and monthly reports, T&Q dashboards, RCA and ACPT analysis.</li>
+                            <li>Handled social-media escalations, PKTs, DIP checks, C-SAT/D-SAT scrubbing and weekly/monthly business reviews.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Flipkart -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Senior Customer Service Associate</h3>
+                                <h4>Flipkart Pvt. Ltd., Noida</h4>
+                            </div>
+                            <span class="date tag">July 2018 – January 2020</span>
+                        </div>
+                        <ul class="exp-list">
+                            <li>Resolved customer queries and complaints efficiently while maintaining high customer satisfaction.</li>
+                            <li>Ensured adherence to quality standards and SLAs; conducted self-audits and quality checks.</li>
+                            <li>Collaborated with internal teams on complex issues and supported new-hire training and knowledge sharing.</li>
+                            <li>Maintained accurate CRM records and used customer interaction insights to identify improvement areas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects / Key Initiatives Section -->
+        <section class="projects-section" id="projects">
+            <div class="section-header">
+                <p class="section-label"><span class="dot-orange"></span> Projects & Key Initiatives</p>
+                <div class="line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <h3 class="project-title">Customer Happiness & Experience Improvement</h3>
+                    <p class="project-desc muted">A customer experience improvement initiative focused on analysing customer feedback, complaints, escalations and quality observations to identify recurring pain points and improve customer handling.</p>
+                    
+                    <ul class="exp-list mt-3">
+                        <li>Analysed customer feedback, complaints, escalations and quality observations to identify recurring customer pain points across Customer Service and Sales interactions.</li>
+                        <li>Categorised issues by process, product/service, communication, resolution and agent-driven gaps to identify major contributors to customer dissatisfaction.</li>
+                        <li>Conducted RCA and trend analysis to identify recurring failure points in the customer journey.</li>
+                        <li>Partnered with Operations and Training teams to develop targeted coaching, refresher sessions and corrective action plans.</li>
+                        <li>Monitored customer experience indicators such as CSAT, NPS, customer complaints, resolution quality and repeat-contact trends to assess improvement.</li>
+                        <li>Created actionable insights for stakeholders to improve customer handling, process adherence and overall customer experience.</li>
+                    </ul>
+                    <div class="tags mt-3">
+                        <span class="tag">Customer Experience</span>
+                        <span class="tag">CSAT</span>
+                        <span class="tag">NPS</span>
+                        <span class="tag">RCA</span>
+                        <span class="tag">Customer Complaints</span>
+                        <span class="tag">Customer Journey</span>
+                        <span class="tag">Process Improvement</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <h3 class="project-title">Customer & Transaction Fraud Pattern Analysis</h3>
+                    <p class="project-desc muted">A risk-analysis initiative focused on identifying suspicious customer/order behaviour, potential abuse patterns and recurring anomalies.</p>
+                    
+                    <ul class="exp-list mt-3">
+                        <li>Analysed customer/order-related patterns to identify potential indicators of fraud, abuse, suspicious behaviour and policy misuse.</li>
+                        <li>Reviewed recurring patterns across transactions, customer behaviour, complaints, returns/refunds and escalations to identify potential risk signals.</li>
+                        <li>Used trend analysis, behavioural patterns and exception identification to highlight cases requiring further investigation.</li>
+                        <li>Identified potential indicators such as unusual transaction frequency, repeated refund/return behaviour, account-level anomalies and inconsistent customer/order information.</li>
+                        <li>Collaborated with relevant stakeholders to strengthen risk identification, escalation and preventive controls.</li>
+                        <li>Recommended a structured approach for monitoring suspicious patterns and documenting cases for future analysis.</li>
+                    </ul>
+                    <div class="tags mt-3">
+                        <span class="tag">Fraud Analysis</span>
+                        <span class="tag">Risk Analysis</span>
+                        <span class="tag">Behavioural Patterns</span>
+                        <span class="tag">Trend Analysis</span>
+                        <span class="tag">Exception Analysis</span>
+                        <span class="tag">Ecommerce</span>
+                        <span class="tag">Customer Risk</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <h3 class="project-title">Customer Service & Sales Quality Improvement</h3>
+                    <p class="project-desc muted">A quality improvement initiative focused on identifying interaction-level defects, improving evaluation consistency and strengthening Customer Service and Sales performance.</p>
+                    
+                    <ul class="exp-list mt-3">
+                        <li>Conducted quality analysis across Customer Service and Sales interactions to identify gaps affecting customer experience, compliance and sales effectiveness.</li>
+                        <li>Analysed quality trends and recurring defects to identify opportunities for coaching and process improvement.</li>
+                        <li>Conducted calibration sessions to improve consistency in evaluation and alignment between Quality, Operations and Training.</li>
+                        <li>Developed targeted action plans for bottom-quartile performers and monitored improvement through subsequent quality reviews.</li>
+                        <li>Used performance reports and dashboards to identify trends, prioritise interventions and communicate insights to stakeholders.</li>
+                        <li>Supported continuous improvement initiatives aimed at balancing customer experience, quality adherence and sales performance.</li>
+                    </ul>
+                    <div class="tags mt-3">
+                        <span class="tag">Sales Quality</span>
+                        <span class="tag">Customer Service Quality</span>
+                        <span class="tag">Calibration</span>
+                        <span class="tag">Quality Audits</span>
+                        <span class="tag">Performance Management</span>
+                        <span class="tag">Coaching</span>
+                        <span class="tag">Process Improvement</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="skills-section" id="expertise">
+            <div class="section-header">
+                <p class="section-label"><span class="dot-orange"></span> Skills & Expertise</p>
+                <div class="line"></div>
+            </div>
+            
+            <div class="skills-categorized-grid">
+                <!-- Quality & Governance -->
+                <div class="skill-category glass-card">
+                    <h4>Quality & Governance</h4>
+                    <div class="tags mt-3">
+                        <span class="tag">Quality Assurance</span>
+                        <span class="tag">Quality Governance</span>
+                        <span class="tag">Quality Audits</span>
+                        <span class="tag">Audit Strategy</span>
+                        <span class="tag">Sampling</span>
+                        <span class="tag">Calibration</span>
+                        <span class="tag">Feedback Management</span>
+                        <span class="tag">Quality Standards</span>
+                        <span class="tag">Process Adherence</span>
+                    </div>
+                </div>
+
+                <!-- Customer Experience -->
+                <div class="skill-category glass-card">
+                    <h4>Customer Experience</h4>
+                    <div class="tags mt-3">
+                        <span class="tag">Customer Experience</span>
+                        <span class="tag">CSAT</span>
+                        <span class="tag">NPS</span>
+                        <span class="tag">Customer Complaint Analysis</span>
+                        <span class="tag">Customer Escalation Analysis</span>
+                        <span class="tag">Customer Journey Improvement</span>
+                        <span class="tag">Customer Comeback Analysis</span>
+                        <span class="tag">Resolution Quality</span>
+                    </div>
+                </div>
+
+                <!-- Process Excellence -->
+                <div class="skill-category glass-card">
+                    <h4>Process Excellence</h4>
+                    <div class="tags mt-3">
+                        <span class="tag">RCA</span>
+                        <span class="tag">CAPA</span>
+                        <span class="tag">Trend Analysis</span>
+                        <span class="tag">Defect Reduction</span>
+                        <span class="tag">Process Improvement</span>
+                        <span class="tag">Corrective Actions</span>
+                        <span class="tag">Preventive Actions</span>
+                        <span class="tag">Continuous Improvement</span>
+                    </div>
+                </div>
+
+                <!-- Leadership & Performance -->
+                <div class="skill-category glass-card">
+                    <h4>Leadership & Performance</h4>
+                    <div class="tags mt-3">
+                        <span class="tag">Team Leadership</span>
+                        <span class="tag">Performance Management</span>
+                        <span class="tag">Bottom-Quartile Improvement</span>
+                        <span class="tag">Coaching</span>
+                        <span class="tag">Stakeholder Management</span>
+                        <span class="tag">Training Collaboration</span>
+                        <span class="tag">Performance Reviews</span>
+                    </div>
+                </div>
+
+                <!-- Risk & Analytics -->
+                <div class="skill-category glass-card">
+                    <h4>Risk & Analytics</h4>
+                    <div class="tags mt-3">
+                        <span class="tag">Fraud/Risk Analysis</span>
+                        <span class="tag">Behavioural Pattern Analysis</span>
+                        <span class="tag">Exception Identification</span>
+                        <span class="tag">Trend Analysis</span>
+                        <span class="tag">Quality Dashboards</span>
+                        <span class="tag">Performance Reporting</span>
+                        <span class="tag">Data-driven Problem Solving</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category glass-card">
+                    <h4>Tools</h4>
+                    <div class="tags mt-3">
+                        <span class="tag">Microsoft Office</span>
+                        <!-- Retained from previous context as requested -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Languages Section -->
+        <section class="education-section" id="education">
+            <div class="section-header">
+                <p class="section-label"><span class="dot-orange"></span> Education & Languages</p>
+                <div class="line"></div>
+            </div>
+            
+            <div class="edu-lang-grid">
+                <div class="education-block">
+                    <div class="edu-item glass-card mb-3">
+                        <h4>Bachelor of Computer Applications (BCA)</h4>
+                        <p class="muted">IGNOU, New Delhi | Dec 2020 – Dec 2023</p>
+                    </div>
+                    <div class="edu-item glass-card mb-3">
+                        <h4>Senior Secondary</h4>
+                        <p class="muted">Mata Bhatee Devi School, New Delhi | 2018</p>
+                    </div>
+                    <div class="edu-item glass-card">
+                        <h4>Matriculation</h4>
+                        <p class="muted">Mata Bhatee Devi School, New Delhi | 2016</p>
+                    </div>
+                </div>
+
+                <div class="languages-block glass-card">
+                    <h4>Languages</h4>
+                    <ul class="lang-list mt-3">
+                        <li>English</li>
+                        <li>Hindi</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer" id="contact">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    KUNALSWEB
+                    <p class="muted mt-2" style="font-size: 0.9rem; font-family: var(--font-body); font-weight: 400;">Assistant Manager – Quality & Customer Experience</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>Email:</strong> <a href="mailto:avidkunal@gmail.com">avidkunal@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+919911137726">+91 99111 37726</a></p>
+                    <p><strong>Location:</strong> New Delhi, India</p>
+                </div>
+                <div class="footer-links">
+                    <a href="tel:+919911137726" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">📞 Call Me</a>
+                    <a href="https://wa.me/919911137726" class="btn-primary" target="_blank" rel="noopener noreferrer" style="padding: 0.5rem 1rem; font-size: 0.85rem; background: #25d366; border-color: #25d366;">💬 WhatsApp</a>
+                    <a href="resume.pdf" class="btn-primary" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.85rem;" rel="noopener noreferrer">Download Resume</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="muted">&copy; 2026 Kunal Shokeen. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
