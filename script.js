@@ -24,22 +24,29 @@ for (let i = 1; i <= frameCount; i++) {
   };
 }
 
-window.addEventListener('scroll', () => {  
-  const scrollTop = html.scrollTop;
-  const maxScrollTop = html.scrollHeight - window.innerHeight;
-  
-  // Guard against division by zero if window is unscrollable
-  if (maxScrollTop <= 0) return;
+let lastFrameIndex = -1;
+let ticking = false;
 
-  const scrollFraction = scrollTop / maxScrollTop;
-  const frameIndex = Math.min(
-    frameCount - 1,
-    Math.floor(scrollFraction * frameCount)
-  );
-  
-  requestAnimationFrame(() => {
-    if (images[frameIndex] && images[frameIndex].complete) {
-      context.drawImage(images[frameIndex], 0, 0);
-    }
-  });
+window.addEventListener('scroll', () => {  
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrollTop = html.scrollTop;
+      const maxScrollTop = html.scrollHeight - window.innerHeight;
+      
+      if (maxScrollTop > 0) {
+        const scrollFraction = scrollTop / maxScrollTop;
+        const frameIndex = Math.min(
+          frameCount - 1,
+          Math.floor(scrollFraction * frameCount)
+        );
+        
+        if (frameIndex !== lastFrameIndex && images[frameIndex] && images[frameIndex].complete) {
+          context.drawImage(images[frameIndex], 0, 0);
+          lastFrameIndex = frameIndex;
+        }
+      }
+      ticking = false;
+    });
+    ticking = true;
+  }
 });
