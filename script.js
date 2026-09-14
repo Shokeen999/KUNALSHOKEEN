@@ -2,13 +2,50 @@ const html = document.documentElement;
 const canvas = document.getElementById("scroll-canvas");
 const context = canvas.getContext("2d");
 
-const frameCount = 300;
+const frameCount = 240;
 const currentFrame = index => (
-  `./frames/frame_${index.toString().padStart(4, '0')}.jpg`
-)
+  `./frames/frame_${index.toString().padStart(6, '0')}.jpg`
+);
 
 const images = [];
 let imagesLoaded = 0;
+let currentFrameIndex = 0;
+
+function updateCanvasSize() {
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = window.innerWidth * dpr;
+  canvas.height = window.innerHeight * dpr;
+  renderFrame(currentFrameIndex);
+}
+
+function renderFrame(index) {
+  const img = images[index];
+  if (!img || !img.complete || img.naturalWidth === 0) return;
+  
+  const canvasWidth = canvas.width;
+  const canvasHeight = canvas.height;
+  const imgWidth = img.naturalWidth;
+  const imgHeight = img.naturalHeight;
+  
+  const imgRatio = imgWidth / imgHeight;
+  const canvasRatio = canvasWidth / canvasHeight;
+  
+  let drawWidth, drawHeight, offsetX, offsetY;
+  if (canvasRatio > imgRatio) {
+    drawWidth = canvasWidth;
+    drawHeight = canvasWidth / imgRatio;
+    offsetX = 0;
+    offsetY = (canvasHeight - drawHeight) / 2;
+  } else {
+    drawWidth = canvasHeight * imgRatio;
+    drawHeight = canvasHeight;
+    offsetX = (canvasWidth - drawWidth) / 2;
+    offsetY = 0;
+  }
+  
+  context.clearRect(0, 0, canvasWidth, canvasHeight);
+  context.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+}
 
 for (let i = 1; i <= frameCount; i++) {
   const img = new Image();
@@ -16,15 +53,14 @@ for (let i = 1; i <= frameCount; i++) {
   images.push(img);
   img.onload = () => {
     imagesLoaded++;
-    if (i === 1) { 
-      canvas.width = img.width;
-      canvas.height = img.height;
-      context.drawImage(img, 0, 0);
+    if (i === 1 || (imagesLoaded === 1 && currentFrameIndex === 0)) {
+      updateCanvasSize();
     }
   };
 }
 
-let lastFrameIndex = -1;
+window.addEventListener('resize', updateCanvasSize);
+
 let ticking = false;
 
 window.addEventListener('scroll', () => {  
@@ -37,12 +73,12 @@ window.addEventListener('scroll', () => {
         const scrollFraction = scrollTop / maxScrollTop;
         const frameIndex = Math.min(
           frameCount - 1,
-          Math.floor(scrollFraction * frameCount)
+          Math.max(0, Math.floor(scrollFraction * frameCount))
         );
         
-        if (frameIndex !== lastFrameIndex && images[frameIndex] && images[frameIndex].complete) {
-          context.drawImage(images[frameIndex], 0, 0);
-          lastFrameIndex = frameIndex;
+        if (frameIndex !== currentFrameIndex) {
+          currentFrameIndex = frameIndex;
+          renderFrame(currentFrameIndex);
         }
       }
       ticking = false;
@@ -50,3 +86,5 @@ window.addEventListener('scroll', () => {
     ticking = true;
   }
 });
+
+updateCanvasSize();
