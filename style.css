@@ -24,12 +24,12 @@ body, body * {
 }
 
 .muted {
-    color: #333333 !important;
+    color: #94a3b8 !important;
     font-size: 0.95rem;
 }
 
 body {
-    background: transparent;
+    background: #0f1117;
     color: var(--text-color);
     font-family: var(--font-body);
     overflow-x: hidden;
@@ -49,19 +49,19 @@ body {
 }
 
 #scroll-canvas {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
-/* Bright canvas overlay so black font stands out clearly over any image frame */
+/* Subtle dark-tinted canvas overlay — keeps glass cards legible */
 .canvas-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(10, 12, 18, 0.18);
     z-index: -1;
     pointer-events: none;
 }
@@ -425,7 +425,7 @@ body {
     animation: marquee 25s linear infinite;
     font-family: var(--font-heading);
     font-size: 3rem;
-    color: #000000;
+    color: #e2e8f0;
     font-weight: 700;
 }
 
@@ -457,7 +457,7 @@ body {
 
 .section-label {
     font-size: 1rem;
-    color: #000000;
+    color: #e2e8f0;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -487,7 +487,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
-    color: #000000;
+    color: #e2e8f0;
     font-weight: 500;
 }
 
@@ -801,8 +801,8 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    color: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
 }
 
 /* Responsive updates for Timeline */
@@ -907,7 +907,7 @@ body {
     font-size: 1.4rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
     padding-bottom: 0.5rem;
 }
 
