@@ -7,7 +7,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=5">
+    <style>
+    /* === CRITICAL GLASS CARD OVERRIDES === */
+    body { background: #0f1117 !important; }
+    .glass-card {
+        background: rgba(22, 27, 34, 0.80) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        backdrop-filter: blur(20px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15) !important;
+        color: #e2e8f0 !important;
+    }
+    .glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4 { color: #ffffff !important; }
+    .glass-card p, .glass-card li { color: #e2e8f0 !important; }
+    .glass-card strong { color: #ffffff !important; }
+    .glass-card .muted { color: #94a3b8 !important; }
+    .glass-card .tag { background: rgba(255,255,255,0.12) !important; border: 1px solid rgba(255,255,255,0.2) !important; color: #ffffff !important; }
+    .glass-card:hover { background: rgba(30,37,48,0.92) !important; transform: translateY(-3px); }
+    .about-glass-panel {
+        background: rgba(22, 27, 34, 0.80) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        backdrop-filter: blur(20px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+        color: #e2e8f0 !important;
+    }
+    .about-glass-panel * { color: #e2e8f0 !important; }
+    .about-glass-panel strong { color: #ffffff !important; }
+    .section-label { color: #e2e8f0 !important; }
+    .dot-orange { background-color: #e85d04 !important; color: #e85d04 !important; }
+    .muted { color: #94a3b8 !important; }
+    .exp-list, .exp-list li { color: #e2e8f0 !important; }
+    .exp-list li strong { color: #ffffff !important; }
+    .exp-header h4 { color: #cbd5e1 !important; }
+    .highlight-tag { background: rgba(232,93,4,0.3) !important; border: 1px solid #e85d04 !important; color: #ffffff !important; }
+    .progression-title { color: #94a3b8 !important; }
+    .progression-steps span { color: #e2e8f0 !important; }
+    .skill-category h4 { border-bottom-color: rgba(255,255,255,0.15) !important; }
+    .marquee-content { color: #e2e8f0 !important; }
+    .footer-contact p, .footer-links a, .footer-bottom { color: #94a3b8 !important; }
+    .lang-list li { color: #e2e8f0 !important; }
+    .line { background: rgba(255,255,255,0.18) !important; }
+    .timeline::before { background: rgba(255,255,255,0.18) !important; }
+    .canvas-overlay { background: rgba(10,12,18,0.18) !important; }
+    </style>
 </head>
 <body>
     <!-- Background Canvas -->
