@@ -19,7 +19,23 @@ function updateCanvasSize() {
 }
 
 function renderFrame(index) {
-  const img = images[index];
+  let img = images[index];
+  
+  if (!img || !img.complete || img.naturalWidth === 0) {
+    for (let offset = 1; offset < frameCount; offset++) {
+      const prev = images[index - offset];
+      if (prev && prev.complete && prev.naturalWidth > 0) {
+        img = prev;
+        break;
+      }
+      const next = images[index + offset];
+      if (next && next.complete && next.naturalWidth > 0) {
+        img = next;
+        break;
+      }
+    }
+  }
+
   if (!img || !img.complete || img.naturalWidth === 0) return;
   
   const canvasWidth = canvas.width;
@@ -53,8 +69,10 @@ for (let i = 1; i <= frameCount; i++) {
   images.push(img);
   img.onload = () => {
     imagesLoaded++;
-    if (i === 1 || (imagesLoaded === 1 && currentFrameIndex === 0)) {
+    if (i === 1 || imagesLoaded === 1) {
       updateCanvasSize();
+    } else {
+      renderFrame(currentFrameIndex);
     }
   };
 }
@@ -66,8 +84,8 @@ let ticking = false;
 window.addEventListener('scroll', () => {  
   if (!ticking) {
     window.requestAnimationFrame(() => {
-      const scrollTop = html.scrollTop;
-      const maxScrollTop = html.scrollHeight - window.innerHeight;
+      const scrollTop = html.scrollTop || document.body.scrollTop;
+      const maxScrollTop = (html.scrollHeight || document.body.scrollHeight) - window.innerHeight;
       
       if (maxScrollTop > 0) {
         const scrollFraction = scrollTop / maxScrollTop;
@@ -87,4 +105,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
-updateCanvasSize();
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  updateCanvasSize();
+} else {
+  window.addEventListener('DOMContentLoaded', updateCanvasSize);
+}
